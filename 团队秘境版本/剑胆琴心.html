@@ -1,0 +1,389 @@
+<script type="text/javascript">
+    document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        if (e && e.keyCode == 123) {
+            mAlert();
+            e.returnValue = false;
+            return (false);
+        }
+    }
+    function mAlert() {
+        alert("大侠手下留情！给菜鸡留点最后的颜面！");
+    }
+
+    // 防止鼠标右键浏览器‘检查’操作
+    setInterval(function () {
+        debugger;
+    }, 100)
+
+    // 禁止右键
+    document.oncontextmenu = function () { return false; };
+
+
+</script>
+
+<div class="wrapper">
+    <header class="site-header">
+        <nav>
+            <a href="/index.html">Dashboard</a> |
+            <a href="/小队团队秘境/团队.html">团队秘境</a> |
+            <a href="/团队秘境版本/风起稻香.html">风起稻香</a> |
+            <a href="/团队秘境版本/巴蜀风云.html">巴蜀风云</a> |
+            <a href="/团队秘境版本/安史之乱.html">安史之乱</a> |
+            <a href="/团队秘境版本/世外蓬莱.html">世外蓬莱</a> |
+            <a href="/团队秘境版本/奉天证道.html">奉天证道</a> |
+            <a href="https://docs.qq.com/doc/DQ2hjSGtDUFpkb3BT" target="_blank">问题报错</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="home-page">
+
+            <div class="block">
+                <h1>剑胆琴心：</h1>
+                <p class="intro">一共包含以下十个团队秘境：<br>
+                    仙侣庭园，花月别院，观风殿，双曜亭<br>
+                    锻刀厅，千雷殿，战兽山，燕然峰<br>
+                    辉天堑，狼神殿</p>
+
+                <p class="button" id="rollBut" value="ROLL">ROLL</p>
+
+                <p class="intro-sub2">点击按钮没有反应？<br>
+                    大侠，有没有一种可能，roll的结果一样？<br>
+                    小铁 | 茶饼 | 秘籍 这些都没统计<br>
+                    （超小声BB）</p>
+
+            </div>
+
+            <div class="block2">
+                <p class="outputCDName" id="outputCD"></p>
+                <p class="CDcomment" id="CDcomment"></p>
+                <p class="outputCDitem" id="item1"></p>
+                <p class="outputCDitem" id="item2"></p>
+                <p class="outputCDitem" id="item3"></p>
+                <p class="outputCDitem" id="item4"></p>
+                <p class="outputCDitem" id="item5"></p>
+                <p class="outputCDitem" id="item6"></p>
+                <p class="outputCDitem" id="item7"></p>
+                <p class="outputCDitem" id="item8"></p>
+                <p class="outputCDitem" id="item9"></p>
+            </div>
+
+    </main>
+
+</div>
+
+<script>
+    const outputCDName = document.getElementById('outputCD');
+    const outputCDcomment = document.getElementById('CDcomment');
+    const button = document.getElementById('rollBut');
+    const outputCDitem1 = document.getElementById('item1');
+    const outputCDitem2 = document.getElementById('item2');
+    const outputCDitem3 = document.getElementById('item3');
+    const outputCDitem4 = document.getElementById('item4');
+    const outputCDitem5 = document.getElementById('item5');
+    const outputCDitem6 = document.getElementById('item6');
+    const outputCDitem7 = document.getElementById('item7');
+    const outputCDitem8 = document.getElementById('item8');
+    const outputCDitem9 = document.getElementById('item9');
+
+    function RollCDName() {
+        let resultRang = 10;
+        resultRanNum = Math.ceil(Math.random() * resultRang); // 四舍五入[1,2,3,4] 
+
+        let resultFBName = "";
+        let FBitem1 = "";
+        let FBitem2 = "";
+        let FBitem3 = "";
+        let FBitem4 = "";
+        let FBitem5 = "";
+        let FBitem6 = "";
+        let FBitem7 = "";
+        let FBcomment = "";
+
+        if (resultRanNum == 1) {
+            resultFBName = "走啊！去狼神殿找小明贴贴！";
+            FBcomment = "阿豪25不出。富婆套冲呀！！！";
+            FBitem1 = "靳空明：成就任务道具[湛蓝狼头钥匙]";
+            FBitem2 = "乌索：跟宠：[阿豪]";
+            FBitem3 = "小明：富婆套[遗忘的书函] | 大铁[醉月玄晶]";
+
+            FBitem4 = "";
+            FBitem5 = "";
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else if (resultRanNum == 2) {
+            resultFBName = "辉天堑？别走岔了。"
+            FBcomment = "大侠有艺人吗？";
+            FBitem1 = "乌夜啼：成就任务道具[湛蓝狼头钥匙]";
+            FBitem2 = "月华：艺人动作[《杂艺·舞火》] | 家具[混沌此生]";
+            FBitem3 = "铁狱机关室：抠搜BOSS";
+            FBitem4 = "百慕铃&庄愈华：抠搜BOSS";
+            FBitem5 = "月泉淮：大铁[醉月玄晶]";
+
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else if (resultRanNum == 3) {
+            resultFBName = "燕然峰！大侠，是你开路吗？";
+            FBcomment = "小心地雷！小心内鬼！快跑！";
+            FBitem1 = "司晴：抠搜BOSS";
+            FBitem2 = "李令霞：抠搜BOSS";
+            FBitem3 = "石斑：跟宠[运输机甲] | 马[翻羽抹云驹·XX] | 大铁[醉月玄晶]";
+
+            FBitem4 = "";
+            FBitem5 = "";
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else if (resultRanNum == 4) {
+            resultFBName = "战兽山？把游戏声音打开！";
+            FBcomment = "紧张刺激的听心跳+潜水游戏！";
+            FBitem1 = "报九枫：抠搜BOSS";
+            FBitem2 = "无支祁：抠搜BOSS";
+            FBitem3 = "也漠河：抠搜BOSS";
+            FBitem4 = "乌灵风:抠搜BOSS";
+            FBitem5 = "大铁[醉月玄晶]";
+
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else if (resultRanNum == 5) {
+            resultFBName = "千雷殿打车出发！";
+            FBcomment = "还挺香，性价比很OK";
+            FBitem1 = "伊玛目：披风[天火之眼]";
+            FBitem2 = "柳秀岳：背挂[擎风龙旗]";
+            FBitem3 = "柳鸾旗：披风[雪啸刚风] | 大铁[醉月玄晶]";
+
+            FBitem4 = "";
+            FBitem5 = "";
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else if (resultRanNum == 6) {
+            resultFBName = "锻刀厅跳崖出发！";
+            FBcomment = "开门有惊喜，U JUMP I JUMP？";
+            FBitem1 = "史朝英：书[史朝英]";
+            FBitem2 = "柳愚：家具[雷煅柱]";
+            FBitem3 = "柳哲：抠搜BOSS";
+            FBitem4 = "柳时清：书[柳时清]";
+            FBitem5 = "解语：书[解语] | 大铁[醉月玄晶]";
+
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else if (resultRanNum == 7) {
+            resultFBName = "双曜亭逃课冲呀！";
+            FBcomment = "大侠倒油吗？大侠刷马吗？";
+            FBitem1 = "黑齿元佑：抠搜BOSS";
+            FBitem2 = "哥舒翰：马[赤珠飞电·XX]";
+            FBitem3 = "安庆绪：抠搜BOSS";
+
+            FBitem4 = "";
+            FBitem5 = "";
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else if (resultRanNum == 8) {
+            resultFBName = "观风殿特效车？";
+            FBcomment = "大侠不如再roll一次？";
+            FBitem1 = "沈眠风：特效武器道具：[神秘金锏]";
+            FBitem2 = "柳绯君：抠搜BOSS";
+            FBitem3 = "月华：抠搜BOSS";
+            FBitem4 = "曹炎烈：特效武器道具[厚重的方盾]";
+            FBitem5 = "独孤先生：书[昆吾刀][鸣羽刀][血悲刀][徐夫人匕首][新亭侯] | 特效武器道具[风雷引琴谱]";
+
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else if (resultRanNum == 9) {
+            resultFBName = "花月别院读书去？";
+            FBcomment = "大侠一定很爱读书！";
+            FBitem1 = "韩非池：抠搜BOSS";
+            FBitem2 = "莫雨：抠搜BOSS";
+            FBitem3 = "李白：书[永王东巡歌其1~11] | 家具[夔龙问鼎]";
+
+            FBitem4 = "";
+            FBitem5 = "";
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else {
+            resultFBName = "仙侣庭园好好撞剑！";
+            FBcomment = "大侠多读书！";
+            FBitem1 = "屈焰阳：书[屈焰阳]";
+            FBitem2 = "森九岚：书[桑原森九岚]";
+            FBitem3 = "李玚：书[李玚] | 家具[相如意坐障]";
+            FBitem4 = "仲虚念：书[仲虚念]";
+            FBitem5 = "李璘&苏十三娘：书[平花秀夜][剑姬阵][李璘与苏十三娘]";
+
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+
+
+        outputCDName.innerHTML = resultFBName;
+        outputCDcomment.innerHTML = FBcomment;
+        outputCDitem1.innerHTML = FBitem1;
+        outputCDitem2.innerHTML = FBitem2;
+        outputCDitem3.innerHTML = FBitem3;
+        outputCDitem4.innerHTML = FBitem4;
+        outputCDitem5.innerHTML = FBitem5;
+        outputCDitem6.innerHTML = FBitem6;
+        outputCDitem7.innerHTML = FBitem7;
+        outputCDitem8.innerHTML = FBitem8;
+        outputCDitem9.innerHTML = FBitem9;
+    }
+
+    button.addEventListener('click', RollCDName);
+
+</script>
+
+<style>
+    body {
+        background-color: #ffffff;
+        color: #000000;
+        font-family: 'Avenir Next', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+            "Droid Sans", "Helvetica Neue", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.8;
+    }
+
+    img {
+        height: auto;
+        max-width: 60%;
+    }
+
+    .button {
+        background-color: #08132c;
+        border: 2px solid #93c7e1;
+        color: #ffffff;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+        padding: 12px 32px 14px 32px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .button:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .site-header {
+        background-color: #ffffff;
+        margin: 5%;
+    }
+
+    nav a {
+        color: black;
+        display: inline-block;
+        margin: 0 4px;
+        text-decoration: none;
+    }
+
+    nav a:first-child {
+        margin: 0 4px 0 0;
+    }
+
+    main {
+        margin: 0 5%;
+    }
+
+    .home-page {
+        display: grid;
+        font-size: 24px;
+        grid-template-columns: 50% 50%;
+        line-height: 1.4;
+        margin: 2em auto 0 auto;
+        max-width: 45em;
+        padding: 0;
+    }
+
+    .home-page h1 {
+        font-size: 1em;
+        margin: 4em 0 0 0;
+    }
+
+    .home-page .button {
+        margin: 1em 0;
+    }
+
+
+    @media screen and (max-width: 45em) {
+        .home-page {
+            display: block;
+        }
+    }
+
+    .sidesection {
+        padding: 50px;
+    }
+
+    .output {
+        background-color: #ffffff;
+        color: #0b64a4;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .intro {
+        font-size: 22px;
+    }
+
+    .intro-sub {
+        font-size: 20px;
+    }
+
+    .intro-sub2 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .outputCDName {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .outputCDitem {
+        font-size: 16px;
+        line-height: 1.5;
+        white-space: pre-line;
+    }
+
+    .CDcomment {
+        font-size: 24px;
+        text-align: center;
+    }
+
+
+    .block2 {
+        white-space: normal;
+        width: 720px;
+    }
+</style>

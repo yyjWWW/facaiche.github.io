@@ -1,0 +1,305 @@
+<script type="text/javascript">
+document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+	var e = event || window.event || arguments.callee.caller.arguments[0];
+	if (e && e.keyCode == 123) {
+		mAlert();
+		e.returnValue = false;
+		return (false);
+	}
+}
+function mAlert() {
+	alert("大侠手下留情！给菜鸡留点最后的颜面！");
+}
+
+// 防止鼠标右键浏览器‘检查’操作
+setInterval(function () {
+	debugger;
+}, 100)
+
+// 禁止右键
+document.oncontextmenu = function () { return false; };
+
+
+</script>
+
+<div class="wrapper">
+    <header class="site-header">
+        <nav>
+            <a href="/index.html">Dashboard</a> |
+            <a href="/小队团队秘境/团队.html">团队秘境</a> |
+            <a href="/团队秘境版本/风起稻香.html">风起稻香</a> |
+            <a href="/团队秘境版本/巴蜀风云.html">巴蜀风云</a> |
+            <a href="/团队秘境版本/安史之乱.html">安史之乱</a> |
+            <a href="/团队秘境版本/剑胆琴心.html">剑胆琴心</a> |
+            <a href="/团队秘境版本/世外蓬莱.html">世外蓬莱</a> |
+            <a href="/团队秘境版本/奉天证道.html">奉天证道</a> |
+            <a href="https://docs.qq.com/doc/DQ2hjSGtDUFpkb3BT" target="_blank">问题报错</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="home-page">
+
+            <div class="block">
+                <h1>世外蓬莱：</h1>
+                <p class="intro">一共包含以下六个团队秘境：<br>
+                    荒血路，青莲狱，巨冥湾，饕餮洞，<br>
+                    敖龙岛，范阳夜变</p>
+
+                <p class="button" id="rollBut" value="ROLL">ROLL</p>
+
+                <p class="intro-sub2">点击按钮没有反应？<br>
+                    大侠，有没有一种可能，roll的结果一样？<br>
+                    小铁 | 茶饼 | 秘籍 这些都没统计<br>
+                    （超小声BB）</p>
+
+            </div>
+
+            <div class="block2">
+                <p class="outputCDName" id="outputCD"></p>
+                <p class="CDcomment" id="CDcomment"></p>
+                <p class="outputCDitem" id="item1"></p>
+                <p class="outputCDitem" id="item2"></p>
+                <p class="outputCDitem" id="item3"></p>
+                <p class="outputCDitem" id="item4"></p>
+                <p class="outputCDitem" id="item5"></p>
+                <p class="outputCDitem" id="item6"></p>
+                <p class="outputCDitem" id="item7"></p>
+                <p class="outputCDitem" id="item8"></p>
+                <p class="outputCDitem" id="item9"></p>
+            </div>
+
+    </main>
+
+</div>
+
+<script>
+    const outputCDName = document.getElementById('outputCD');
+    const outputCDcomment = document.getElementById('CDcomment');
+    const button = document.getElementById('rollBut');
+    const outputCDitem1 = document.getElementById('item1');
+    const outputCDitem2 = document.getElementById('item2');
+    const outputCDitem3 = document.getElementById('item3');
+    const outputCDitem4 = document.getElementById('item4');
+    const outputCDitem5 = document.getElementById('item5');
+    const outputCDitem6 = document.getElementById('item6');
+    const outputCDitem7 = document.getElementById('item7');
+    const outputCDitem8 = document.getElementById('item8');
+    const outputCDitem9 = document.getElementById('item9');
+
+    function RollCDName() {
+        let resultRang = 6;
+        resultRanNum = Math.ceil(Math.random() * resultRang); // 四舍五入[1,2,3,4] 
+
+        let resultFBName = "";
+        let FBitem1 = "";
+        let FBitem2 = "";
+        let FBitem3 = "";
+        let FBitem4 = "";
+        let FBitem5 = "";
+        let FBitem6 = "";
+        let FBitem7 = "";
+        let FBcomment = "";
+
+        if (resultRanNum == 1) {
+            resultFBName = "走啊！去夜店蹦迪啊！";
+            FBcomment = "弃身披风话筒幽冥录男同小说任您挑选！";
+            FBitem1 = "周贽：抠搜BOSS";
+            FBitem2 = "厌夜：背挂[簪花空竹]";
+            FBitem3 = "迟驻：特效腰挂[弃身·肆] | 书[何弃身·迟驻（下）]";
+            FBitem4 = "白某：跟宠：[幽明录] | 书[何弃身·白某（上）][何弃身·白某（下）] | 大铁[归墟玄晶]";
+            FBitem5 = "安小逢：家具[润州绣舞筵] | 特效腰挂[聆音] + 披风：[夜泊蝶影] | 大铁[归墟玄晶]";
+            FBitem6 = "幻境·迟驻：背挂[簪花空竹] | 特效腰挂[弃身·肆] | 特效背挂[九州定鼎] | 跟宠[鑫鑫] | 称号[弹指去来]";
+            FBitem7 = "幻境·安小逢：背挂[天怒惊霆戟] + 特效腰挂[聆音] | 披风[夜泊蝶影] | 称号[弹指去来] | 富婆套[一朵精致的百合花]";
+
+        }
+        else if (resultRanNum == 2) {
+            resultFBName = "敖龙岛定星各就位？"
+            FBcomment = "大侠有铃铛吗？面具木木独角兽任君挑选?";
+            FBitem1 = "铁黎：特效武器道具[命石的碎片]";
+            FBitem2 = "陈徽：特效武器道具[命石的碎片]";
+            FBitem3 = "藤原武裔：特效武器道具[命石的碎片] | 腰挂[赤纹野正宗]";
+            FBitem4 = "源思弦：特效武器道具[命石的碎片] | 面具[隐狐匿踪]";
+            FBitem5 = "驺吾：特效武器道具[命石的碎片][生命之石] | 跟宠[木木] | 大铁[归墟玄晶]";
+            FBitem6 = "崖酱：特效武器道具[命石的碎片][生命之石] | 马[星云踏月骓] | 大铁[归墟玄晶]";
+            FBitem7 = "逃脱：特效武器应该截止到[五相斩] | 快速道具：[银环玉扣]";
+            FBitem8 = "隐藏：特效武器应该截止到[风雷瑶琴剑]";
+            FBitem9 = "龙须：特效背挂[石剑·溟灵] | 称号[一剑定星辰]]";
+        }
+        else if (resultRanNum == 3) {
+            resultFBName = "饕餮洞！";
+            FBcomment = "？大侠，不如再roll一遍？";
+            FBitem1 = "此副本貌似空空如也";
+        }
+        else if (resultRanNum == 4) {
+            resultFBName = "JMW？富婆快乐鞭？";
+            FBcomment = "可以是可以，除非追龙须。";
+            FBitem1 = "孙楚珊：抠搜BOSS";
+            FBitem2 = "虎翼突袭：抠搜BOSS";
+            FBitem3 = "邢不僵：特效武器道具[霜风雷煅录·外篇残页]";
+            FBitem4 = "鬼首:背挂[天怒惊霆戟]";
+            FBitem5 = "无面鬼:跟宠[鑫鑫]";
+            FBitem6 = "晏厄&晏灾:抠搜BOSS";
+            FBitem7 = "龙须:跟宠[六耳鲵]，特效腰挂[相映红]";
+        }
+        else if (resultRanNum == 5) {
+            resultFBName = "走啊，荒血路机关大沙雕啊！";
+            FBcomment = "是真的扣";
+            FBitem1 = "康疑：抠搜BOSS";
+            FBitem2 = "铂尔：抠搜BOSS";
+            FBitem3 = "罗纳真：抠搜BOSS";
+            FBitem4 = "没藏呼月&拓跋思羽:抠搜BOSS";
+            FBitem5 = "拿云:抠搜BOSS";
+            FBitem6 = "隐藏:玩具[靛羽风鸟]";
+        }
+        else {
+            resultFBName = "青莲狱";
+            FBcomment = "？大侠，不如再roll一遍？";
+            FBitem1 = "伊玛目：特效背挂[九州定鼎]";
+        }
+
+
+        outputCDName.innerHTML = resultFBName;
+        outputCDcomment.innerHTML = FBcomment;
+        outputCDitem1.innerHTML = FBitem1;
+        outputCDitem2.innerHTML = FBitem2;
+        outputCDitem3.innerHTML = FBitem3;
+        outputCDitem4.innerHTML = FBitem4;
+        outputCDitem5.innerHTML = FBitem5;
+        outputCDitem6.innerHTML = FBitem6;
+        outputCDitem7.innerHTML = FBitem7;
+        outputCDitem8.innerHTML = FBitem8;
+        outputCDitem9.innerHTML = FBitem9;
+    }
+
+    button.addEventListener('click', RollCDName);
+
+</script>
+
+<style>
+    body {
+        background-color: #ffffff;
+        color: #000000;
+        font-family: 'Avenir Next', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+            "Droid Sans", "Helvetica Neue", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.8;
+    }
+
+    img {
+        height: auto;
+        max-width: 60%;
+    }
+
+    .button {
+        background-color: #08132c;
+        border: 2px solid #93c7e1;
+        color: #ffffff;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+        padding: 12px 32px 14px 32px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .button:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .site-header {
+        background-color: #ffffff;
+        margin: 5%;
+    }
+
+    nav a {
+        color: black;
+        display: inline-block;
+        margin: 0 4px;
+        text-decoration: none;
+    }
+
+    nav a:first-child {
+        margin: 0 4px 0 0;
+    }
+
+    main {
+        margin: 0 5%;
+    }
+
+    .home-page {
+        display: grid;
+        font-size: 24px;
+        grid-template-columns: 50% 50%;
+        line-height: 1.4;
+        margin: 2em auto 0 auto;
+        max-width: 45em;
+        padding: 0;
+    }
+
+    .home-page h1 {
+        font-size: 1em;
+        margin: 4em 0 0 0;
+    }
+
+    .home-page .button {
+        margin: 1em 0;
+    }
+
+
+    @media screen and (max-width: 45em) {
+        .home-page {
+            display: block;
+        }
+    }
+
+    .sidesection {
+        padding: 50px;
+    }
+
+    .output {
+        background-color: #ffffff;
+        color: #0b64a4;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .intro {
+        font-size: 22px;
+    }
+
+    .intro-sub {
+        font-size: 20px;
+    }
+
+    .intro-sub2 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .outputCDName {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .outputCDitem {
+        font-size: 16px;
+        line-height: 1.5;
+        white-space: pre-line;
+    }
+
+    .CDcomment {
+        font-size: 24px;
+        text-align: center;
+    }
+
+
+    .block2 {
+        white-space: normal;
+        width: 720px;
+    }
+</style>

@@ -1,0 +1,299 @@
+<script type="text/javascript">
+    document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        if (e && e.keyCode == 123) {
+            mAlert();
+            e.returnValue = false;
+            return (false);
+        }
+    }
+    function mAlert() {
+        alert("大侠手下留情！给菜鸡留点最后的颜面！");
+    }
+
+    // 防止鼠标右键浏览器‘检查’操作
+    setInterval(function () {
+        debugger;
+    }, 100)
+
+    // 禁止右键
+    document.oncontextmenu = function () { return false; };
+
+
+</script>
+
+<div class="wrapper">
+    <header class="site-header">
+        <nav>
+            <a href="/index.html">Dashboard</a> |
+            <a href="/小队团队秘境/团队.html">团队秘境</a> |
+            <a href="/团队秘境版本/巴蜀风云.html">巴蜀风云</a> |
+            <a href="/团队秘境版本/安史之乱.html">安史之乱</a> |
+            <a href="/团队秘境版本/剑胆琴心.html">剑胆琴心</a> |
+            <a href="/团队秘境版本/世外蓬莱.html">世外蓬莱</a> |
+            <a href="/团队秘境版本/奉天证道.html">奉天证道</a> |
+            <a href="https://docs.qq.com/doc/DQ2hjSGtDUFpkb3BT" target="_blank">问题报错</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="home-page">
+
+            <div class="block">
+                <h1>风起稻香：</h1>
+                <p class="intro">一共包含以下四个团队秘境：<br>
+                    战宝迦兰，持国天王殿，宫中神武遗迹，荻花宫后山</p>
+
+                <p class="button" id="rollBut" value="ROLL">ROLL</p>
+
+                <p class="intro-sub2">点击按钮没有反应？<br>
+                    大侠，有没有一种可能，roll的结果一样？<br>
+                    小铁 | 茶饼 | 秘籍 这些都没统计<br>
+                    （超小声BB）</p>
+
+            </div>
+
+            <div class="block2">
+                <p class="outputCDName" id="outputCD"></p>
+                <p class="CDcomment" id="CDcomment"></p>
+                <p class="outputCDitem" id="item1"></p>
+                <p class="outputCDitem" id="item2"></p>
+                <p class="outputCDitem" id="item3"></p>
+                <p class="outputCDitem" id="item4"></p>
+                <p class="outputCDitem" id="item5"></p>
+                <p class="outputCDitem" id="item6"></p>
+                <p class="outputCDitem" id="item7"></p>
+                <p class="outputCDitem" id="item8"></p>
+                <p class="outputCDitem" id="item9"></p>
+            </div>
+
+    </main>
+
+</div>
+
+<script>
+    const outputCDName = document.getElementById('outputCD');
+    const outputCDcomment = document.getElementById('CDcomment');
+    const button = document.getElementById('rollBut');
+    const outputCDitem1 = document.getElementById('item1');
+    const outputCDitem2 = document.getElementById('item2');
+    const outputCDitem3 = document.getElementById('item3');
+    const outputCDitem4 = document.getElementById('item4');
+    const outputCDitem5 = document.getElementById('item5');
+    const outputCDitem6 = document.getElementById('item6');
+    const outputCDitem7 = document.getElementById('item7');
+    const outputCDitem8 = document.getElementById('item8');
+    const outputCDitem9 = document.getElementById('item9');
+
+    function RollCDName() {
+        let resultRang = 4;
+        resultRanNum = Math.ceil(Math.random() * resultRang); // 四舍五入[1,2,3,4] 
+
+        let resultFBName = "";
+        let FBitem1 = "";
+        let FBitem2 = "";
+        let FBitem3 = "";
+        let FBitem4 = "";
+        let FBitem5 = "";
+        let FBitem6 = "";
+        let FBitem7 = "";
+        let FBcomment = "";
+
+        if (resultRanNum == 1) {
+            resultFBName = "出发，荻花宫后山刷花架！";
+            FBcomment = "家具散发小爱心";
+            FBitem1 = "水烟：抠搜BOSS";
+            FBitem2 = "罗索斯：抠搜BOSS";
+            FBitem3 = "提坦德亚罗：抠搜BOSS";
+            FBitem4 = "背挂[夺命三千][夺命三千·鸿] | 家具[阿里曼花架]";
+            FBitem5 = "";
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else if (resultRanNum == 2) {
+            resultFBName = "宫中神武遗迹出发！"
+            FBcomment = "小心突然暴毙";
+            FBitem1 = "谢云流：家具[相扑力士像]";
+            FBitem2 = "       一堆秘籍不贴了";
+            FBitem3 = "       [纯阳诀其二][纯阳诀其三][大力金刚掌第二式][大力金刚掌第三式]";
+            FBitem4 = "       [七秀剑舞诀第二章][七秀剑舞诀第三章][太宗兵法第二章][太宗兵法第三章]";
+            FBitem5 = "       [万花岐黄术第二章][万花岐黄术第三章]";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else if (resultRanNum == 3) {
+            resultFBName = "持国天王殿";
+            FBcomment = "大侠小心走错门！";
+            FBitem1 = "提多罗吒：一堆秘籍不贴了";
+            FBitem2 = "         [纯阳诀其二][纯阳诀其三][大力金刚掌第二式][大力金刚掌第三式]";
+            FBitem3 = "         [七秀剑舞诀第二章][七秀剑舞诀第三章][太宗兵法第二章][太宗兵法第三章]";
+            FBitem4 = "         [万花岐黄术第二章][万花岐黄术第三章]";
+            FBitem5 = "";
+            FBitem6 = "";
+            FBitem7 = "";
+            FBitem8 = "";
+            FBitem9 = "";
+        }
+        else {
+            resultFBName = "战宝迦兰";
+            FBcomment = "老二路远，道阻且长。";
+            FBitem1 = "王海银：书/秘籍[七秀剑舞诀第一章][《西子情·云栖松》人偶图残页]";
+            FBitem2 = "朱癸：书/秘籍[万花岐黄术第一章][《太素九针·提针》人偶图断篇]";
+            FBitem3 = "平灯：书/秘籍[太宗兵法第一章][《虎牙令·啸如虎》穴位图绝章]";
+            FBitem4 = "掌火：腰挂[铩] | 马具[阿湿矩沙足饰] | 书/秘籍[纯阳诀其一][《罗汉棍法·韦陀献杵》人偶图残页][《破阵令·盾墙》人偶图断篇]";
+            FBitem5 = "镇恶：背挂[徊] | 马具[阿湿矩沙头饰] | 书/秘籍[大力金刚掌第一式][《霓裳羽衣·左旋右转》真传绝章][《天魔无相·惊鸿游龙》人偶图残页]";
+            FBitem6 = "三兄弟：马具[阿湿矩沙鞍饰] | 大铁[飞仙玄晶] | 一堆秘籍不想贴了";
+            FBitem7 = "千手观音：家具[菩提会石灯] | 大铁[飞仙玄晶]";
+            FBitem8 = "         书/秘籍[纯阳诀其一][大力金刚掌第一式][七秀剑舞诀第一章][太宗兵法第一章][万花岐黄术第一章]";
+            FBitem9 = "         等一堆秘籍";
+
+        }
+
+
+        outputCDName.innerHTML = resultFBName;
+        outputCDcomment.innerHTML = FBcomment;
+        outputCDitem1.innerHTML = FBitem1;
+        outputCDitem2.innerHTML = FBitem2;
+        outputCDitem3.innerHTML = FBitem3;
+        outputCDitem4.innerHTML = FBitem4;
+        outputCDitem5.innerHTML = FBitem5;
+        outputCDitem6.innerHTML = FBitem6;
+        outputCDitem7.innerHTML = FBitem7;
+        outputCDitem8.innerHTML = FBitem8;
+        outputCDitem9.innerHTML = FBitem9;
+    }
+
+    button.addEventListener('click', RollCDName);
+
+</script>
+
+<style>
+    body {
+        background-color: #ffffff;
+        color: #000000;
+        font-family: 'Avenir Next', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+            "Droid Sans", "Helvetica Neue", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.8;
+    }
+
+    img {
+        height: auto;
+        max-width: 60%;
+    }
+
+    .button {
+        background-color: #08132c;
+        border: 2px solid #93c7e1;
+        color: #ffffff;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+        padding: 12px 32px 14px 32px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .button:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .site-header {
+        background-color: #ffffff;
+        margin: 5%;
+    }
+
+    nav a {
+        color: black;
+        display: inline-block;
+        margin: 0 4px;
+        text-decoration: none;
+    }
+
+    nav a:first-child {
+        margin: 0 4px 0 0;
+    }
+
+    main {
+        margin: 0 5%;
+    }
+
+    .home-page {
+        display: grid;
+        font-size: 24px;
+        grid-template-columns: 50% 50%;
+        line-height: 1.4;
+        margin: 2em auto 0 auto;
+        max-width: 45em;
+        padding: 0;
+    }
+
+    .home-page h1 {
+        font-size: 1em;
+        margin: 4em 0 0 0;
+    }
+
+    .home-page .button {
+        margin: 1em 0;
+    }
+
+
+    @media screen and (max-width: 45em) {
+        .home-page {
+            display: block;
+        }
+    }
+
+    .sidesection {
+        padding: 50px;
+    }
+
+    .output {
+        background-color: #ffffff;
+        color: #0b64a4;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .intro {
+        font-size: 22px;
+    }
+
+    .intro-sub {
+        font-size: 20px;
+    }
+
+    .intro-sub2 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .outputCDName {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .outputCDitem {
+        font-size: 16px;
+        line-height: 1.5;
+        white-space: pre-line;
+    }
+
+    .CDcomment {
+        font-size: 24px;
+        text-align: center;
+    }
+
+
+    .block2 {
+        white-space: normal;
+        width: 720px;
+    }
+</style>
