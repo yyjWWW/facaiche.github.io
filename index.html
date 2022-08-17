@@ -36,15 +36,13 @@
         <div class="home-page">
 
             <div class="block">
-                <img src="https://s2.loli.net/2022/08/16/RuWXs2qBMmxvQb6.png" alt="多问号小人">
+                <img src="https://s2.loli.net/2022/08/17/kAcQ6yEjoeanibW.png" alt="多问号小人">
             </div>
 
             <div class="block">
                 <h1>大侠！是不是不知道去哪里发财？</h1>
-                <p class="intro">副本掉落是本人看掉落统计的，<br>
-                    应该会有遗漏，还请谅解。<br>
+                <p class="intro">副本掉落由人工统计，应该会有遗漏，还请谅解。<br>
                     欢迎帅哥美女报错。<br>
-                    <br>
                     能用就行！真的！
                 </p>
 
@@ -56,20 +54,39 @@
                 </p>
 
             </div>
-
-            <div class="block">
-                <p class = "infobla">
-                    本域名由亲爱的老婆们激情思考<br>
-                    本页面由熬夜达人YYJ努力拼凑完成<br>
-                    本页面由东山方回独家赞助<br>
-                <p class = "infobla2">（最后一句一杯奶茶一条）</p>
+            <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="togglePopop()">&times;</div>
+                    <p>本Domain由最机智的小金鱼提议<br>
+                        本页面由QM&QR贡献点评<br>
+                        本页面由守夜冠军YYJ努力拼凑完成<br>
+                        本页面由东山方回独家赞助</p>
+                    <p class="huadiao">
+                         (对！就是她！天天月亮不睡她不睡！)<br>
+                        （最后一句一杯奶茶一条）</p>
+                </div>
             </div>
+            
+            
+
+
+
+            <p class="button" id="but" onclick="togglePopop()">大侠请点这里</p>
 
 
 
     </main>
 
 </div>
+
+<script>
+    function togglePopop() {
+        document.getElementById("popup-1").classList.toggle("active");
+
+    }
+</script>
+
 
 <style>
     body {
@@ -85,7 +102,7 @@
 
     img {
         height: auto;
-        max-width: 90%;
+        max-width: 70%;
     }
 
     .button {
@@ -99,6 +116,7 @@
         padding: 12px 32px 14px 32px;
         text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
     }
 
     .button:hover {
@@ -152,10 +170,6 @@
         }
     }
 
-    .sidesection {
-        padding: 50px;
-    }
-
     .output {
         background-color: #ffffff;
         color: #0b64a4;
@@ -167,11 +181,66 @@
         font-size: 16px;
     }
 
-    .infobla{
+    .infobla {
         font-size: 18px;
     }
 
-    .infobla2{
+    .infobla2 {
         font-size: 14px;
+    }
+
+    .popup .overlay {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+        display: none;
+    }
+
+    .popup .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)scale(0);
+        background: #fff;
+        width: 450px;
+        height: 220px;
+        z-index: 2;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 18px;
+    }
+
+    .popup .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        background: #222;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+    }
+
+    .popup.active .overlay {
+        display: block;
+    }
+
+    .popup.active .content {
+        transition: all 300ms ease-in-out;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .huadiao {
+        font-size: 14px;
+        text-decoration: line-through;
     }
 </style>
