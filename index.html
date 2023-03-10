@@ -1,246 +1,88 @@
-<script type="text/javascript">
-    document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
-        var e = event || window.event || arguments.callee.caller.arguments[0];
-        if (e && e.keyCode == 123) {
-            mAlert();
-            e.returnValue = false;
-            return (false);
-        }
-    }
-    function mAlert() {
-        alert("大侠手下留情！给菜鸡留点最后的颜面！");
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    // 防止鼠标右键浏览器‘检查’操作
-    setInterval(function () {
-        debugger;
-    }, 100)
+<head>
+    <meta charset="UTF-8">
+    <title>今天熬夜了吗</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/indexcss.css">
+    <script src="./js/forb.js"></script>
+    <script src="./js/indexfunc.js"></script>
+    <link rel="stylesheet" href="/css/button.css">
 
-    // 禁止右键
-    document.oncontextmenu = function () { return false; };
+    <link rel="stylesheet" href="/css/dibusection.css">
+</head>
 
+<div class="navigation">
+    <nav>
+        <a href="/index.html" style="font-weight: 800; color: #08132c;">Dashboard</a> |
+        <a href="/html/tuanduimain/tuanduicard/dist/index.html">团队秘境</a> |
+        <a href="/html/xiaoduimain/xiaoduicard/dist/index.html">小队秘境</a> |
+        <a href="https://docs.qq.com/doc/DQ2hjSGtDUFpkb3BT" target="_blank">问题报错</a>
+    </nav>
 
-</script>
+</div>
 
-<div class="wrapper">
-    <header class="site-header">
-        <nav>
-            <a href="/小队团队秘境/团队.html">团队秘境</a> |
-            <a href="/小队团队秘境/小队.html">5人本</a> |
-
-            <a href="https://docs.qq.com/doc/DQ2hjSGtDUFpkb3BT" target="_blank">问题报错</a>
-        </nav>
-    </header>
-
+<center>
     <main>
-        <div class="home-page">
-
-            <div class="block">
-                <img src="https://s2.loli.net/2022/08/17/udVhPgwbO9LM86m.png" alt="多问号小人">
+        <div class="body">
+            <div class="img">
+                <img src="https://s2.loli.net/2022/08/17/udVhPgwbO9LM86m.png" alt="多问号小人" style="height: 300px;">
             </div>
 
-            <div class="block">
+            <div class="content1">
                 <h1>大侠！是不是不知道去哪里发财？</h1>
-                <p class="intro">副本掉落由人工统计，应该会有遗漏，还请谅解。<br>
+                <p>副本掉落由人工统计，应该会有遗漏，还请谅解。<br>
                     欢迎帅哥美女报错。<br>
                     能用就行！真的！
                 </p>
 
-                <p class="intro2">菜鸡有话说：<br>
-                    hard code页面，多做一步都是在燃烧生命！<br>
-                    一切都是为了骗亲友多陪我丸！<br>
+                <p style="font-size: 16px;">菜鸡有话说：<br>
                     我是真的菜!<br>
                     撒把米王婆婆家的鸡都比我强。
                 </p>
 
-            </div>
-            <div class="popup" id="popup-1">
-                <div class="overlay"></div>
-                <div class="content">
-                    <div class="close-btn" onclick="togglePopop()">&times;</div>
-                    <p>本Domain由最机智的小金鱼提议<br>
-                        本页面有寻宝猎咪&上品花盆前排围观<br>
-                        本页面由守夜冠军YYJ努力拼凑完成<br>
-                        本页面由东山方回独家赞助</p>
-                    <p class="huadiao">
-                         (对！就是她！第一条那个！天天月亮不睡她不睡！)<br>
-                        （最后一句一杯奶茶一条）</p>
+                <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="togglePopop()">&times;</div>
+                        <p>本Domain由最机智的小金鱼提议<br>
+                            本页面有寻宝猎咪&上品花盆前排围观<br>
+                            本页面由守夜冠军YYJ努力拼凑完成<br>
+                            本页面由东山方回独家赞助</p>
+                        <p class="huadiao">
+                            (对！就是她！第一条那个！天天月亮不睡她不睡！)<br>
+                            （最后一句一杯奶茶一条）
+                        </p>
+                    </div>
                 </div>
+
+                <p class="button" id="but" onclick="togglePopop()">大侠请点这里</p>
+
             </div>
-            
-            
-
-
-
-            <p class="button" id="but" onclick="togglePopop()">大侠请点这里</p>
-
-
+        </div>
 
     </main>
+</center>
 
-</div>
+<center>
+    <div class="btmsection" style="padding-top: 350px;">
+        <img src="/iconimg/icons/team/dsfh.png" alt="dsfh">
+        <img src="/iconimg/icons/blank.png" alt="·">
+        <img src="/iconimg/icons/team/qm2.png" alt="mls">
+        <img src="/iconimg/icons/blank.png" alt="·">
+        <img src="/iconimg/icons/team/xy.png" alt="xjy">
+        <img src="/iconimg/icons/blank.png" alt="·">
+        <img src="/iconimg/icons/team/yyj2.png" alt="yyj">
+        <p>上品盆栽：<img src="/iconimg/icons/team/qr2.png" alt="qr" style="height: 50px;"></p>
+
+    </div>
+</center>
+
+</html>
 
 <script>
-    function togglePopop() {
-        document.getElementById("popup-1").classList.toggle("active");
 
-    }
 </script>
-
-
-<style>
-    body {
-        background-color: #ffffff;
-        color: #000000;
-        font-family: 'Avenir Next', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-            "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-            "Droid Sans", "Helvetica Neue", sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.8;
-    }
-
-    img {
-        height: auto;
-        max-width: 70%;
-    }
-
-    .button {
-        background-color: #08132c;
-        border: 2px solid #93c7e1;
-        color: #ffffff;
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 600;
-        margin: 0;
-        padding: 12px 32px 14px 32px;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-    }
-
-    .button:hover {
-        background-color: #ffffff;
-        color: #000000;
-    }
-
-    .site-header {
-        background-color: #ffffff;
-        margin: 5%;
-    }
-
-    nav a {
-        color: black;
-        display: inline-block;
-        margin: 0 4px;
-        text-decoration: none;
-    }
-
-    nav a:first-child {
-        margin: 0 4px 0 0;
-    }
-
-    main {
-        margin: 0 5%;
-    }
-
-    .home-page {
-        display: grid;
-        font-size: 24px;
-        grid-template-columns: 50% 50%;
-        line-height: 1.4;
-        margin: 2em auto 0 auto;
-        max-width: 45em;
-        padding: 0;
-    }
-
-    .home-page h1 {
-        font-size: 1em;
-        margin: 4em 0 0 0;
-    }
-
-    .home-page .button {
-        margin: 1em 0;
-    }
-
-
-    @media screen and (max-width: 45em) {
-        .home-page {
-            display: block;
-        }
-    }
-
-    .output {
-        background-color: #ffffff;
-        color: #0b64a4;
-        font-size: 26px;
-        text-align: center;
-    }
-
-    .intro2 {
-        font-size: 16px;
-    }
-
-    .infobla {
-        font-size: 18px;
-    }
-
-    .infobla2 {
-        font-size: 14px;
-    }
-
-    .popup .overlay {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.7);
-        z-index: 1;
-        display: none;
-    }
-
-    .popup .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%)scale(0);
-        background: #fff;
-        width: 450px;
-        height: 220px;
-        z-index: 2;
-        text-align: center;
-        padding: 20px;
-        box-sizing: border-box;
-        font-size: 18px;
-    }
-
-    .popup .close-btn {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        width: 30px;
-        height: 30px;
-        background: #222;
-        color: #fff;
-        font-size: 25px;
-        font-weight: 600;
-        line-height: 30px;
-        text-align: center;
-        border-radius: 50%;
-    }
-
-    .popup.active .overlay {
-        display: block;
-    }
-
-    .popup.active .content {
-        transition: all 300ms ease-in-out;
-        transform: translate(-50%, -50%) scale(1);
-    }
-
-    .huadiao {
-        font-size: 14px;
-        text-decoration: line-through;
-    }
-</style>
