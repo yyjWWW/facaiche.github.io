@@ -1,0 +1,42 @@
+body{
+    background-color:#ffffff;
+    color: #000000;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* .toptitle{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+} */
+
+.navigation{
+    width: 1000px;
+    margin: 0 auto;
+
+    /* border: 1.5px solid black; */
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+nav a {
+    color: black;
+    display: inline-block;
+    margin: 0 4px;
+    text-decoration: none;
+}
+
+nav a:first-child {
+    margin: 0 4px 0 0;
+}
+
+main {
+    margin: 0 5%;
+}
+
+.cards{
+    width:800px;
+}

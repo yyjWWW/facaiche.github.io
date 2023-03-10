@@ -1,0 +1,21 @@
+.infoimgicon{
+    width: 25px;
+    height: 25px;
+
+    border-color: #000000;
+    border-radius: 5px;
+    border: solid #08132c;
+    background-color: #93c7e1;
+
+    margin-bottom: 145px;
+}
+
+.infoimgicon:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+.infoimgicon img{
+    width: 25px;
+    height: 25px;
+}

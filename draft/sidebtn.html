@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>网页右侧客服悬浮框</title>
+  <script src="./styles/js/jquery.min.js"></script>
+  <style>
+    .my_kefu {position: fixed;width: auto;top: 40%;right: 0px;z-index: 99;}
+    .my_kefu ul {}
+    .my_kefu ul li {background: #424242;width: 30px;height: 50px;margin-bottom: 10px;display: flex;flex-direction: column;justify-content: center;align-items: center;border-radius: 10px;padding: 0px 15px;}
+    .my_kefu_item img {width: 20px;}
+    .my_kefu_item {display: flex;align-items: center;justify-content: space-around;color: white;}
+    .my_kefu ul li:hover {cursor: pointer;background: red;}
+    .my_kefu_img {display: none;width: 140px;height: auto;position: absolute;right: 4rem;background: #424242;color: white;}
+    .my_kefu_img img {width: 100%;}
+    .my_kefu_hidden {display: none;flex-direction: row;justify-content: center;align-items: center;z-index: 999;height: 50px;border-radius: 10px;width: auto;background: red;color: #fff;padding: 0px 20px;}
+    .my_kefu_hidden img {width: 20px;}
+    .my_kefu_hidden a {display: flex;flex-direction: row;width: 90px;align-items: center;color: #fff;justify-content: center;}
+    .my_kefu_hidden > div {display: flex;flex-direction: column;min-width: 120px;}
+    .my_kefu ul li:hover .my_kefu_item {display: none;}
+    .my_kefu ul li:hover .my_kefu_hidden {display: flex;flex-direction: row;text-align: center;position: absolute;right: 0px;}
+    .my_kefu ul li:hover .my_kefu_img {display: flex;}
+  </style>
+</head>
+<body>
+ 
+<div class="my_kefu">
+  <ul>
+    <li>
+      <div><img src="./styles/images/kf_weixin.png"></div>
+      <div class="my_kefu_img"><img id="weixin" src="./styles/images/weixin_han.jpg"></div>
+    </li>
+    <li>
+      <div class="my_kefu_item"><span><img src="'/styles/images/kf_qq.png"></span></div>
+      <div class="my_kefu_hidden">
+        <a href="" id="qq">
+          <span><img src="./styles/images/kf_phone.png"></span>
+          <span>点击咨询</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="my_kefu_item"><span><img src="./images/kf_phone.png"></span></div>
+      <div class="my_kefu_hidden">
+        <span><img src="./styles/images/kf_phone.png"></span>
+        <div>
+          <span id="name1">韩先生</span>
+          <span id="phone">1897733091</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="my_kefu_item"><span><img src=".styles/images/kf_zuoji.png"></span></div>
+      <div class="my_kefu_hidden">
+        <span><img src="./styles/images/kf_zuoji.png"></span>
+        <div>
+          <span id="name2">韩先生</span>
+          <span id="zuoji">0755-8576323</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div style="color: white;font-size: 18px" id="top">Top</div>
+    </li>
+  </ul>
+</div>
+ 
+</body>
+</html>
+<script type="text/javascript">
+  var list = [
+    {
+      name: "李工",
+      phone: '18928380011',
+      zuoji: '0755-33467939',
+      qq_number: '8123607709',
+      qq: 'tencent://message/?uin=8123607709&amp;Site=龙人&amp;Menu=yes',
+      weixin: 'http://www.nage.net/style/images/weixin_li.jpg'
+    },
+    {
+      name: "黄工",
+      phone: '18924449933',
+      zuoji: '0755-8378200',
+      qq_number: '22446774',
+      qq: 'tencent://message/?uin=22446774&amp;Site=龙人&amp;Menu=yes',
+      weixin: 'http://www.nage.net/style/images/weixin_huang.jpg'
+ 
+    },
+    {
+      name: "韩工",
+      phone: '18924567091',
+      zuoji: '0755-83764443',
+      qq_number: '7863330736',
+      qq: 'tencent://message/?uin=7863330736&amp;Site=龙人&amp;Menu=yes',
+      weixin: 'http://www.nage.net/style/images/weixin_han.jpg'
+ 
+    },
+    {
+      name: "韩工",
+      phone: '192333331',
+      zuoji: '0755-8355553',
+      qq_number: '3211234485',
+      qq: 'tencent://message/?uin=3211234485&amp;Site=龙人&amp;Menu=yes',
+      weixin: 'http://www.nage.net/style/images/weixin_han.jpg'
+    }
+  ];
+ 
+  var weixin = document.getElementById('weixin');
+  var qq = document.getElementById('qq');
+  var name1 = document.getElementById('name1');
+  var name2 = document.getElementById('name2');
+  var phone = document.getElementById('phone');
+  var zuoji = document.getElementById('zuoji');
+ 
+  var i = Math.floor(Math.random() * (list.length - 0) + 0);
+ 
+  console.log(i);
+  weixin.src = list[i].weixin;
+  qq.href = list[i].qq;
+  name1.innerHTML = list[i].name;
+  name2.innerHTML = list[i].name;
+  phone.innerHTML = list[i].phone;
+  zuoji.innerHTML = list[i].zuoji;
+ 
+  $("#top").click(function () {
+    $("html,body").animate({scrollTop: 0}, 'slow')
+  })
+ 
+ 
+</script>
