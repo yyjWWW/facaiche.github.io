@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>今天熬夜了吗·团队秘境·剑胆琴心</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/fqdxtd.css">
+    <script src="/js/forb.js"></script>
+    <script src="/js/indexfunc.js"></script>
+    <script src="./styles/js/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/css/btt.css">
+    <script src="/js/backtotop.js"></script>
+
+    <link rel="stylesheet" href="/css/button.css">
+</head>
+
+<div class="navigation">
+    <nav>
+        <a href="/index.html">Dashboard</a> |
+        <a href="/html/tuanduimain/tuanduicard/dist/index.html" style="font-weight: 800; color: #08132c;">团队秘境</a> |
+        <a href="/html/xiaoduimain/xiaoduicard/dist/index.html">小队秘境</a> |
+        <a href="https://docs.qq.com/doc/DQ2hjSGtDUFpkb3BT" target="_blank">问题报错</a>
+    </nav>
+
+    <nav style="font-size: 16px; padding-top: 15px; padding-left: 100px;">
+        <a href="/html/tuanduimain/fqdx/fqdxtd.html">风起稻香</a> |
+        <a href="/html/tuanduimain/bsfy/bsfy.html">巴蜀风云</a> |
+        <a href="/html/tuanduimain/aszl/aszl.html">安史之乱</a> |
+        <a href="/html/tuanduimain/jdqx/jdqx.html" style="font-weight: 800; color: #08132c;">剑胆琴心</a> |
+        <a href="/html/tuanduimain/swpl/swpltd.html">世外蓬莱</a> |
+        <a href="/html/tuanduimain/ftzd/ftzdtd.html">奉天证道</a> |
+        <a href="/html/tuanduimain/hddl/hddltd.html">横刀断浪</a>
+    </nav>
+
+
+</div>
+
+
+<main>
+    <div class="mainclass">
+        <div class="titlepage">
+            <h1>剑胆琴心</h1>
+        </div>
+
+        <div class="content">
+            <p>包含以下团队秘境：</br>
+                <a href="#xlty" class="dmdt">仙侣庭院</a>
+                <a href="#hyby" class="bdjgt">花月别院</a>
+                <a href="#gfd" class="lydzt">观风殿</a>
+                <a href="#syt" class="hyzzt">双曜亭</a><br>
+                <a href="#ddt" class="hyzzt">锻刀厅</a>
+                <a href="#qld" class="hyzzt">千雷殿</a>
+                <a href="#zss" class="hyzzt">战兽山</a>
+                <a href="#yrf" class="hyzzt">燕然峰</a>
+                <a href="#htq" class="hyzzt">辉天堑</a>
+                <a href="#lsd" class="hyzzt">狼神殿</a>
+            </p>
+        </div>
+    </div>
+    <div class="mainclass">
+        <center>
+            <div class="randomCD">
+                <div class="randomCDpic">
+                    <img src="/iconimg/xiaoren/4.png" alt="btt" style="width:300px; height: 300px; float: left;">
+                </div>
+                <div class="randomCDinfo1" style="width: 500px; height:300px; float: right;">
+                    <p style="font-size: 18px;">
+                        队里有恩公了嘛</br>
+                        走，刷披风去了</br>
+                        卡BUG刷马啊！</br>
+                        都给我读书！！！
+                    </p>
+
+                    <p class="button" id="rollBut" value="ROLL">ROLL</p>
+
+                    <p class="butsub">点击按钮没有反应？<br>
+                        大侠，有没有一种可能，roll的结果一样？<br>
+                        小铁 | 茶饼 | 秘籍 这些都没统计<br>
+                        （超小声BB）<br>
+                        注意10R/25PT/25YX掉落差异。<br>
+                        还得一个个对比，太烦了暂时不想对。
+                    </p>
+                </div>
+                <div class="randomCDr">
+                    <p class="outputCDName" id="outputCD"></p>
+                    <p class="CDcomment" id="CDcomment"></p>
+                </div>
+            </div>
+        </center>
+    </div>
+
+
+    <div class="mainclass">
+        <div class="info">
+            <h3><a name="xlty" class="xlty">仙侣庭院</a>
+                <a href="/html/tuanduimain/jdqx/1xlty.html" target="_blank">
+                    <img src="/iconimg/icons/question-line.png" alt="3" class="questionmk" id="questionmk"
+                        style="width: 25px;" target="_blank">
+                </a>
+            </h3>
+
+            <center>
+                <table border="1" ; cellspacing="0" ; align="center;">
+                    <tr>
+                        <th width="50"></th>
+                        <th width="200">BOSS</th>
+                        <th width="400">掉落</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th style=" font-weight: 500;">屈焰阳</th>
+                        <th style=" font-weight: 500;">书[屈焰阳]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th style=" font-weight: 500;">森九岚</th>
+                        <th style=" font-weight: 500;">书[桑原森九岚]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th style=" font-weight: 500;">李玚</th>
+                        <th style=" font-weight: 500;">书[李玚]</br>
+                            家具[相如意坐障]
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th style=" font-weight: 500;">仲虚念</th>
+                        <th style=" font-weight: 500;">书[仲虚念]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th style=" font-weight: 500;">李璘&苏十三娘</th>
+                        <th style=" font-weight: 500;">书[平花秀夜][剑姬阵][李璘与苏十三娘]</br>
+                        </th>
+                    </tr>
+
+                </table>
+            </center>
+
+            <h3><a name="hyby" class="hyby">花月别院</a>
+                <a href="/html/tuanduimain/jdqx/2hyby.html" target="_blank">
+                    <img src="/iconimg/icons/question-line.png" alt="3" class="questionmk" id="questionmk"
+                        style="width: 25px;" target="_blank">
+                </a>
+            </h3>
+
+            <center>
+                <table border="1" ; cellspacing="0" ; align="center;">
+                    <tr>
+                        <th width="50"></th>
+                        <th width="200">BOSS</th>
+                        <th width="400">掉落</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th style=" font-weight: 500;">韩非池</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th style=" font-weight: 500;">莫雨</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th style=" font-weight: 500;">李白</th>
+                        <th style=" font-weight: 500;">书[永王东巡歌其1~11]</br>
+                            家具[夔龙问鼎]
+                        </th>
+                    </tr>
+                </table>
+            </center>
+
+            <h3><a name="gfd" class="gfd">观风殿</a>
+                <a href="/html/tuanduimain/jdqx/3gfd.html" target="_blank">
+                    <img src="/iconimg/icons/question-line.png" alt="3" class="questionmk" id="questionmk"
+                        style="width: 25px;" target="_blank">
+                </a>
+            </h3>
+
+            <center>
+                <table border="1" ; cellspacing="0" ; align="center;">
+                    <tr>
+                        <th width="50"></th>
+                        <th width="200">BOSS</th>
+                        <th width="400">掉落</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th style=" font-weight: 500;">沈眠风</th>
+                        <th style=" font-weight: 500;">特效武器[神秘金锏]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th style=" font-weight: 500;">柳绯君</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th style=" font-weight: 500;">月华</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th style=" font-weight: 500;">曹炎烈</th>
+                        <th style=" font-weight: 500;">特效武器[厚重的方盾]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th style=" font-weight: 500;">独孤先生</th>
+                        <th style=" font-weight: 500;">特效武器道具[风雷引琴谱]</br>
+                            书[昆吾刀][鸣羽刀]</br>[血悲刀][徐夫人匕首][新亭侯]
+                        </th>
+                    </tr>
+
+                </table>
+            </center>
+
+            <h3><a name="syt" class="syt">双曜亭</a>
+                <a href="/html/tuanduimain/jdqx/4syt.html" target="_blank">
+                    <img src="/iconimg/icons/question-line.png" alt="3" class="questionmk" id="questionmk"
+                        style="width: 25px;" target="_blank">
+                </a>
+            </h3>
+
+            <center>
+                <table border="1" ; cellspacing="0" ; align="center;">
+                    <tr>
+                        <th width="50"></th>
+                        <th width="200">BOSS</th>
+                        <th width="400">掉落</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th style=" font-weight: 500;">黑齿元佑</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th style=" font-weight: 500;">哥舒翰</th>
+                        <th style=" font-weight: 500;">马[赤珠飞电·XX]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th style=" font-weight: 500;">安庆绪</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+
+                </table>
+            </center>
+
+            <h3><a name="ddt" class="ddt">锻刀厅</a>
+                <a href="/html/tuanduimain/jdqx/5ddt.html" target="_blank">
+                    <img src="/iconimg/icons/question-line.png" alt="3" class="questionmk" id="questionmk"
+                        style="width: 25px;" target="_blank">
+                </a>
+            </h3>
+
+            <center>
+                <table border="1" ; cellspacing="0" ; align="center;">
+                    <tr>
+                        <th width="50"></th>
+                        <th width="200">BOSS</th>
+                        <th width="400">掉落</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th style=" font-weight: 500;">史朝英</th>
+                        <th style=" font-weight: 500;">书[史朝英]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th style=" font-weight: 500;">柳愚</th>
+                        <th style=" font-weight: 500;">家具[雷煅柱]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th style=" font-weight: 500;">柳哲</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th style=" font-weight: 500;">柳时清</th>
+                        <th style=" font-weight: 500;">书[柳时清]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th style=" font-weight: 500;">解语</th>
+                        <th style=" font-weight: 500;">书[解语]</br>
+                            大铁[醉月玄晶]
+                        </th>
+                    </tr>
+                </table>
+            </center>
+
+            <h3><a name="qld" class="qld">千雷殿</a>
+                <a href="/html/tuanduimain/jdqx/6qld.html" target="_blank">
+                    <img src="/iconimg/icons/question-line.png" alt="3" class="questionmk" id="questionmk"
+                        style="width: 25px;" target="_blank">
+                </a>
+            </h3>
+
+            <center>
+                <table border="1" ; cellspacing="0" ; align="center;">
+                    <tr>
+                        <th width="50"></th>
+                        <th width="200">BOSS</th>
+                        <th width="400">掉落</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th style=" font-weight: 500;">伊玛目</th>
+                        <th style=" font-weight: 500;">披风[天火之眼]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th style=" font-weight: 500;">柳秀岳</th>
+                        <th style=" font-weight: 500;">背挂[擎风龙旗]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th style=" font-weight: 500;">柳鸾旗</th>
+                        <th style=" font-weight: 500;">披风[雪啸刚风]</br>
+                            大铁[醉月玄晶]
+                        </th>
+                    </tr>
+                </table>
+            </center>
+
+            <h3><a name="zss" class="zss">战兽山</a>
+                <a href="/html/tuanduimain/jdqx/7zss.html" target="_blank">
+                    <img src="/iconimg/icons/question-line.png" alt="3" class="questionmk" id="questionmk"
+                        style="width: 25px;" target="_blank">
+                </a>
+            </h3>
+
+            <center>
+                <table border="1" ; cellspacing="0" ; align="center;">
+                    <tr>
+                        <th width="50"></th>
+                        <th width="200">BOSS</th>
+                        <th width="400">掉落</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th style=" font-weight: 500;">报九枫</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th style=" font-weight: 500;">无支祁</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th style=" font-weight: 500;">也漠河</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th style=" font-weight: 500;">乌灵风</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th style=" font-weight: 500;">唐书雁</th>
+                        <th style=" font-weight: 500;">大铁[醉月玄晶]</br>
+                        </th>
+                    </tr>
+
+                </table>
+            </center>
+
+
+            <h3><a name="yrf" class="yrf">燕然峰</a>
+                <a href="/html/tuanduimain/jdqx/8yrf.html" target="_blank">
+                    <img src="/iconimg/icons/question-line.png" alt="3" class="questionmk" id="questionmk"
+                        style="width: 25px;" target="_blank">
+                </a>
+            </h3>
+
+            <center>
+                <table border="1" ; cellspacing="0" ; align="center;">
+                    <tr>
+                        <th width="50"></th>
+                        <th width="200">BOSS</th>
+                        <th width="400">掉落</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th style=" font-weight: 500;">司晴</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th style=" font-weight: 500;">李令霞</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th style=" font-weight: 500;">石斑</th>
+                        <th style=" font-weight: 500;">跟宠[运输机甲]</br>
+                            马[翻羽抹云驹·XX]</br>
+                            大铁[醉月玄晶]
+                        </th>
+                    </tr>
+                    
+
+                </table>
+            </center>
+
+            <h3><a name="htq" class="htq">辉天堑</a>
+                <a href="/html/tuanduimain/jdqx/9htq.html" target="_blank">
+                    <img src="/iconimg/icons/question-line.png" alt="3" class="questionmk" id="questionmk"
+                        style="width: 25px;" target="_blank">
+                </a>
+            </h3>
+
+            <center>
+                <table border="1" ; cellspacing="0" ; align="center;">
+                    <tr>
+                        <th width="50"></th>
+                        <th width="200">BOSS</th>
+                        <th width="400">掉落</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th style=" font-weight: 500;">乌夜啼</th>
+                        <th style=" font-weight: 500;">成就任务道具[湛蓝狼头钥匙]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th style=" font-weight: 500;">月华</th>
+                        <th style=" font-weight: 500;">艺人动作[《杂艺·舞火》]</br>
+                            家具[混沌此生]
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th style=" font-weight: 500;">铁狱机关室</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th style=" font-weight: 500;">百慕铃&庄愈华</th>
+                        <th style=" font-weight: 500;">抠搜BOSS</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th style=" font-weight: 500;">月泉淮</th>
+                        <th style=" font-weight: 500;">大铁[醉月玄晶]</br>
+                        </th>
+                    </tr>
+                </table>
+            </center>
+
+            <h3><a name="lsd" class="lsd">狼神殿</a>
+                <a href="/html/tuanduimain/jdqx/10lsd.html" target="_blank">
+                    <img src="/iconimg/icons/question-line.png" alt="3" class="questionmk" id="questionmk"
+                        style="width: 25px;" target="_blank">
+                </a>
+            </h3>
+
+            <center>
+                <table border="1" ; cellspacing="0" ; align="center;">
+                    <tr>
+                        <th width="50"></th>
+                        <th width="200">BOSS</th>
+                        <th width="400">掉落</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th style=" font-weight: 500;">靳空明</th>
+                        <th style=" font-weight: 500;">成就任务道具[湛蓝狼头钥匙]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th style=" font-weight: 500;">乌索</th>
+                        <th style=" font-weight: 500;">跟宠[阿豪]</br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th style=" font-weight: 500;">小明</th>
+                        <th style=" font-weight: 500;">富婆套[遗忘的书函] </br>
+                            大铁[醉月玄晶]
+                        </th>
+                    </tr>
+                </table>
+            </center>
+
+            <div class="my_kefu">
+                <ul>
+                    <li>
+                        <div class="my_kefu_item"><span>
+                                <p>仙</p>
+
+                            </span></div>
+                        <div class="my_kefu_hidden">
+                            <div>
+                                <span id="name1">
+                                    <a href="#xlty" class="xlty">仙侣庭院</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="my_kefu_item"><span>
+                                <p>花</p>
+
+                            </span></div>
+                        <div class="my_kefu_hidden">
+                            <div>
+                                <span id="name1">
+                                    <a href="#hyby" class="hyby">花月别院</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="my_kefu_item"><span>
+                                <p>风</p>
+
+                            </span></div>
+                        <div class="my_kefu_hidden">
+                            <div>
+                                <span id="name1">
+                                    <a href="#gfd" class="gfd">观风殿</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="my_kefu_item"><span>
+                                <p>曜</p>
+
+                            </span></div>
+                        <div class="my_kefu_hidden">
+                            <div>
+                                <span id="name1">
+                                    <a href="#syt" class="syt">双曜亭</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="my_kefu_item"><span>
+                                <p>锻</p>
+
+                            </span></div>
+                        <div class="my_kefu_hidden">
+                            <div>
+                                <span id="name1">
+                                    <a href="#ddt" class="ddt">锻刀厅</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="my_kefu_item"><span>
+                                <p>雷</p>
+
+                            </span></div>
+                        <div class="my_kefu_hidden">
+                            <div>
+                                <span id="name1">
+                                    <a href="#qld" class="qld">千雷殿</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="my_kefu_item"><span>
+                                <p>兽</p>
+
+                            </span></div>
+                        <div class="my_kefu_hidden">
+                            <div>
+                                <span id="name1">
+                                    <a href="#zss" class="zss">战兽山</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="my_kefu_item"><span>
+                                <p>燕</p>
+
+                            </span></div>
+                        <div class="my_kefu_hidden">
+                            <div>
+                                <span id="name1">
+                                    <a href="#yrf" class="yrf">燕然峰</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="my_kefu_item"><span>
+                                <p>辉</p>
+
+                            </span></div>
+                        <div class="my_kefu_hidden">
+                            <div>
+                                <span id="name1">
+                                    <a href="#htq" class="htq">辉天堑</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="my_kefu_item"><span>
+                                <p>狼</p>
+
+                            </span></div>
+                        <div class="my_kefu_hidden">
+                            <div>
+                                <span id="name1">
+                                    <a href="#lsd" class="lsd">狼神殿</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="floatbtt" id="floatbtt">
+                            <a title="backtotop" onclick="window.scrollTo(0,0); return false;" href="#titlepage"><img
+                                    src="/iconimg/icons/arrow-up-s-line2.png" alt="btt"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+
+            </div>
+        </div>
+</main>
+
+<center>
+    <div class="btmsection">
+        <img src="/iconimg/icons/team/dsfh.png" alt="dsfh">
+        <img src="/iconimg/icons/blank.png" alt="·">
+        <img src="/iconimg/icons/team/qm2.png" alt="mls">
+        <img src="/iconimg/icons/blank.png" alt="·">
+        <img src="/iconimg/icons/team/xy.png" alt="xjy">
+        <img src="/iconimg/icons/blank.png" alt="·">
+        <img src="/iconimg/icons/team/yyj2.png" alt="yyj">
+        <p>上品盆栽：<img src="/iconimg/icons/team/qr2.png" alt="qr" style="height: 50px;"></p>
+
+    </div>
+</center>
+
+</div>
+
+</html>
+
+<script>
+    const outputCDName = document.getElementById('outputCD');
+    const outputCDcomment = document.getElementById('CDcomment');
+    const button = document.getElementById('rollBut');
+
+    var CDlist = ["仙侣庭院", "花月别院", "观风殿", "双曜亭", "锻刀厅", "千雷殿","战兽山","燕然峰","辉天堑","狼神殿"];
+
+    function RollCDName() {
+        let resultRang = CDlist.length;
+        resultRanNum = Math.ceil(Math.random() * resultRang); // 四舍五入[1,2,3,4] 
+
+        let resultFBName = "";
+        let FBcomment = "";
+
+        if (resultRanNum == 1) {
+            resultFBName = "仙侣庭院好好撞剑！";
+            FBcomment = "大侠多读书！";
+        }
+        else if (resultRanNum == 2) {
+            resultFBName = "花月别院读书去？";
+            FBcomment = "读！都给我读！";
+        }
+        else if (resultRanNum == 3) {
+            resultFBName = "观风殿特效车？";
+            FBcomment = "大侠，咱要不去敖隐藏或者达摩门神吧？";
+        }
+        else if (resultRanNum == 4) {
+            resultFBName = "双曜亭逃课冲呀！！！";
+            FBcomment = "大侠倒油嘛？大侠刷马嘛？";
+        }
+        else if (resultRanNum == 5) {
+            resultFBName = "锻刀厅";
+            FBcomment = "开门有惊喜，U JUMP I JUMP？";
+        }
+        else if (resultRanNum == 6) {
+            resultFBName = "千雷殿打车出发！";
+            FBcomment = "双披风冲呀！";
+        }
+        else if (resultRanNum == 7) {
+            resultFBName = "战兽山？把游戏声音打开！来这还玩哑巴游戏呢！";
+            FBcomment = "紧张刺激的听心跳+潜水团建！";
+        }
+        else if (resultRanNum == 8) {
+            resultFBName = "燕然峰！大侠，是你开路吗？";
+            FBcomment = "快跑！小心地雷！小心内鬼！！！";
+        }
+        else if (resultRanNum == 9) {
+            resultFBName = "辉天堑";
+            FBcomment = "别走岔了，大侠开艺人身份了嘛？";
+        }
+        else if (resultRanNum == 10) {
+            resultFBName = "走啊！去狼神殿找小明贴贴！";
+            FBcomment = "阿豪25不出。富婆套冲呀！！！";
+        }
+        else {
+            resultFBName = "";
+            FBcomment = "";
+        }
+
+        outputCDName.innerHTML = resultFBName;
+        outputCDcomment.innerHTML = FBcomment;
+    }
+
+    button.addEventListener('click', RollCDName);
+
+</script>
