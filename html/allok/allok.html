@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>今天熬夜了吗·团队秘境</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700'>
+    <link rel="stylesheet" href="/html/tuanduimain/tuanduicard/dist/style.css">
+    <link rel="stylesheet" href="/css/cards.css">
+
+    <script src="/js/forb.js"></script>
+    <script src="/js/indexfunc.js"></script>
+    <script src="./styles/js/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/css/dibusection.css">
+    <link rel="stylesheet" href="/css/button.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="navigation">
+        <nav>
+            <a href="/index.html">Dashboard</a> |
+            <a href="/html/tuanduimain/tuanduicard/dist/index.html">团队秘境</a>
+            |
+            <a href="/html/xiaoduimain/xiaoduicard/dist/index.html">小队秘境</a> |
+            <a href="https://docs.qq.com/doc/DQ2hjSGtDUFpkb3BT" target="_blank">问题报错</a>
+        </nav>
+
+        <!-- partial -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
+        <script src="./script.js"></script>
+
+    </div>
+    <center>
+        <br>
+        <div>
+            <p>大侠！还没想好去哪发财是吧？</p>
+            <p>那么，点击↓按钮，立马出发</p>
+            <p class="button" id="rollBut" value="ROLL">ROLL</p>
+        </div>
+
+        <br><br><br>
+        <div class="randomCDr">
+            <p class="outputCDName" id="outputCD"></p>
+            <p class="CDcomment" id="CDcomment"></p>
+        </div>
+    </center>
+</body>
+
+
+</html>
+<script>
+    const outputCDName = document.getElementById('outputCD');
+    const outputCDcomment = document.getElementById('CDcomment');
+    const button = document.getElementById('rollBut');
+
+    var CDlist = [];
+    var CDlist_fqdx = ["战宝迦兰", "持国天王殿", "宫中神武遗迹", "荻花宫后山"];
+    var CDlist_bsfy = ["荻花圣殿", "龙渊泽", "荻花洞窟", "神剑冢", "持国天王回忆录", "烛龙殿", "会战唐门", "南诏皇宫"];
+    var CDlist_aszl = ["战宝军械库", "大明宫", "血战天策", "风雪稻香村", "秦皇陵", "夜守孤城","驱虎逐狼"];
+    var CDlist_jdqx = ["仙侣庭院", "花月别院", "观风殿", "双曜亭", "锻刀厅", "千雷殿","战兽山","燕然峰","辉天堑","狼神殿"];
+    var CDlist_swpl = ["范阳夜变", "敖龙岛", "饕餮洞", "巨冥湾", "青莲狱", "荒血路"];
+    var CDlist_ftzd = ["河阳之战", "雷域大泽", "白帝江关", "达摩洞"];
+    var CDlist_hddl = ["西津渡", "武狱黑牢", "九老洞"];
+
+    CDlist = CDlist.concat(CDlist_fqdx);
+    console.log(CDlist);
+    CDlist = CDlist.concat(CDlist_bsfy);
+    console.log(CDlist);
+    CDlist = CDlist.concat(CDlist_aszl);
+    console.log(CDlist);
+    CDlist = CDlist.concat(CDlist_jdqx);
+    console.log(CDlist);
+    CDlist = CDlist.concat(CDlist_swpl);
+    console.log(CDlist);
+    CDlist = CDlist.concat(CDlist_ftzd);
+    console.log(CDlist);
+    CDlist = CDlist.concat(CDlist_hddl);
+    console.log(CDlist);
+
+    function RollCDName() {
+        let resultRang = CDlist.length;
+        resultRanNum = Math.ceil(Math.random() * resultRang) - 1; // 四舍五入[1,2,3,4] 
+
+        var resultFBName = "";
+        var FBcomment = "";
+
+        if (resultRanNum <= resultRang) {
+            resultFBName = CDlist[resultRanNum];
+            <!-- FBcomment = resultRanNum; -->
+        }
+        else {
+            resultFBName = " ";
+            FBcomment = " ";
+        }
+
+        outputCDName.innerHTML = resultFBName;
+        outputCDcomment.innerHTML = FBcomment;
+    }
+
+    button.addEventListener('click', RollCDName);
+
+</script>
