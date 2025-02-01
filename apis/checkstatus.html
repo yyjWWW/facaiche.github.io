@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查询幽月轮服务器状态</title>
+</head>
+
+<body>
+    <div id="result"></div>
+
+    <script>
+        // 直接指定要查询的服务器名称
+        const serverName = "幽月轮";
+        const apiUrl = `https://www.jx3api.com/data/server/check?server=${encodeURIComponent(serverName)}`;
+
+        fetch(apiUrl)
+          .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP 请求失败，状态码: ${response.status}`);
+                }
+                return response.json();
+            })
+          .then(data => {
+                const resultDiv = document.getElementById('result');
+                if (data.code === 200) {
+                    const serverData = data.data;
+                    resultDiv.innerHTML = `
+                        <p>大区: ${serverData.zone}</p>
+                        <p>服务器: ${serverData.server}</p>
+                        <p>状态: ${serverData.status === 1 ? '开启' : '未开启'}</p>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<p>请求失败，错误信息: ${data.msg}</p>`;
+                }
+            })
+          .catch(error => {
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `<p>请求发生错误: ${error.message}</p>`;
+            });
+    </script>
+</body>
+
+</html>
