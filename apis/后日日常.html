@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查询后日活动日历</title>
+</head>
+
+<body>
+    <div id="result"></div>
+
+    <script>
+        // 构建请求的 URL
+        const apiUrl = 'https://www.jx3api.com/data/active/calendar?server=幽月轮&num=2';
+
+        // 发送 GET 请求
+        fetch(apiUrl)
+          .then(response => {
+                // 检查响应状态
+                if (!response.ok) {
+                    throw new Error(`HTTP 请求失败，状态码: ${response.status}`);
+                }
+                // 将响应内容解析为 JSON 格式
+                return response.json();
+            })
+          .then(data => {
+                const resultDiv = document.getElementById('result');
+                if (data.code === 200) {
+                    // 假设 API 返回的数据结构中有一个 data 字段包含所需信息
+                    const activeData = data.data;
+                    // 这里可以根据实际的数据结构对数据进行处理和展示
+                    resultDiv.innerHTML = `<pre>${JSON.stringify(activeData, null, 2)}</pre>`;
+                } else {
+                    resultDiv.innerHTML = `<p>请求失败，错误信息: ${data.msg}</p>`;
+                }
+            })
+          .catch(error => {
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `<p>请求发生错误: ${error.message}</p>`;
+            });
+    </script>
+</body>
+
+</html>
